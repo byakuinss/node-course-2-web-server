@@ -77,9 +77,15 @@ app.get('/about', (req, res) => {
 	//inject data for dynamic parameter
 	//render would search the files in the view folder
 	res.render('about.hbs', {
-		pageTitle: 'About Page',
+		pageTitle: 'About Page'
 	});
 });
+
+app.get('/project', (req, res) => {
+	res.render('project.hbs', {
+		pageTitle: 'Project Page'
+	});
+})
 
 app.get('/bad', (req, res) => {
 	res.send({
